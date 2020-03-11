@@ -36,7 +36,6 @@ def Get_MS():
     v5 = -np.cross(np.transpose(w5),np.transpose(p5))
     v6 = -np.cross(np.transpose(w6),np.transpose(p6))
     S1 = np.r_[w1,np.transpose(v1)]
-    print(S1)
     S2 = np.r_[w2,np.transpose(v2)]
     S3 = np.r_[w3,np.transpose(v3)]
     S4 = np.r_[w4,np.transpose(v4)]
