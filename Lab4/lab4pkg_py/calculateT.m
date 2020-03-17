@@ -22,3 +22,4 @@ S = [0  0  0  0  1  0;
      T = T*(expm(SS*theta(i)));
  end
  T = T*M
+ d = T(1:3,4)
