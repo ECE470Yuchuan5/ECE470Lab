@@ -13,28 +13,28 @@ def Get_MS():
 	# Fill in the correct values for S1~6, as well as the M matrix
     M = np.eye(4)
     S = np.zeros((6,6))
-    M = np.array([[0.       , -1.       , 0.      ,      540], \
-                  [0.       , 0.       , -1.      ,      192], \
-                  [1.       , 0.       , 0.      ,      152], \
+    M = np.array([[0.       , -1.       , 0.      ,      0.39], \
+                  [0.       , 0.       , -1.      ,      0.401], \
+                  [1.       , 0.       , 0.      ,      0.2155], \
                   [0.       , 0.       , 0.      ,      1.  ]])
-    p1 = np.array([[0.],[0.],[0.]])
-    p2 = np.array([[0.],[120],[152]])
-    p3 = np.array([[244.],[120.],[152]])
-    p4 = np.array([[457],[27],[152]])
-    p5 = np.array([[457],[110],[152]])
-    p6 = np.array([[540],[110],[152]])
+    q1 = np.array([[-0.15],[0.15],[0.01]])
+    q2 = np.array([[-0.15],[0.27],[0.162]])
+    q3 = np.array([[0.094],[0.27],[0.162]])
+    q4 = np.array([[0.307],[0.177],[0.162]])
+    q5 = np.array([[0.307],[0.26],[0.162]])
+    q6 = np.array([[0.39],[0.26],[0.162]])
     w1 = np.array([[0.],[0.],[1.]])
     w2 = np.array([[0.],[1],[0]])
     w3 = np.array([[0.],[1],[0.]])
     w4 = np.array([[0.],[1],[0.]])
     w5 = np.array([[1.],[0.],[0.]])
     w6 = np.array([[0.],[1.],[0.]])
-    v1 = -np.cross(np.transpose(w1),np.transpose(p1))
-    v2 = -np.cross(np.transpose(w2),np.transpose(p2))
-    v3 = -np.cross(np.transpose(w3),np.transpose(p3))
-    v4 = -np.cross(np.transpose(w4),np.transpose(p4))
-    v5 = -np.cross(np.transpose(w5),np.transpose(p5))
-    v6 = -np.cross(np.transpose(w6),np.transpose(p6))
+    v1 = -np.cross(np.transpose(w1),np.transpose(q1))
+    v2 = -np.cross(np.transpose(w2),np.transpose(q2))
+    v3 = -np.cross(np.transpose(w3),np.transpose(q3))
+    v4 = -np.cross(np.transpose(w4),np.transpose(q4))
+    v5 = -np.cross(np.transpose(w5),np.transpose(q5))
+    v6 = -np.cross(np.transpose(w6),np.transpose(q6))
     S1 = np.r_[w1,np.transpose(v1)]
     S2 = np.r_[w2,np.transpose(v2)]
     S3 = np.r_[w3,np.transpose(v3)]
